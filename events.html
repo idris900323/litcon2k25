@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events - LitCon '25 — EnLit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Space Canvas (programmatic background) -->
+  <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <!-- Left Logos -->
+  <div class="left-logos">
+    <img src="easwari.png" alt="Easwari Logo" class="logo">
+    <img src="VL.png" alt="Vox Logo" class="logo ">
+  </div>
+
+  <!-- Center block -->
+  <div class="title-block">
+    <h1 class="title">LitCon '25</h1>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="events.html">Events</a>
+    </nav>
+  </div>
+
+  <!-- Right Logo -->
+  <div class="right-logo">
+    <img src="enlit.jpg" alt="EnLit Logo" class="logo">
+  </div>
+</header>
+
+
+  <main>
+    <!-- Offline Events -->
+    <section class="events-section">
+      <h2 class="section-title">Events</h2>
+      <div class="events-grid">
+        
+      
+        <!-- Who's Lying Event -->
+        <div class="event-card">
+          <h3 class="event-title">WHO'S LYING?</h3>
+          <div class="event-rules">
+            <h4>Rules:</h4>
+            <ul>
+              <li>Each team will be given a role or identity (real or fictional). One participant will secretly be assigned as the Liar/Imposter with a different or no backstory</li>
+              <li>Players take turns asking only one question per turn to any other player. Questions must relate to the given role/identity or scenario</li>
+              <li>Participants must answer immediately and keep their responses consistent throughout the game</li>
+              <li>Accusations or revealing guesses are allowed only after the questioning rounds are over</li>
+              <li>Ensure questions are within theme, stop irrelevant or repetitive questioning, and maintain fair play</li>
+            </ul>
+            <h4>Date:</h4><p>25/09/2025</p>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹25</div>
+            <a href="https://forms.gle/ysfiLwJuC34rciXu8 " target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+
+        <!-- Fictional World Face-Off Event -->
+        <div class="event-card">
+          <h3 class="event-title">FICTIONAL WORLD FACE-OFF</h3>
+          <div class="event-rules">
+            <h4>Rules:</h4>
+            <ul>
+              <li>Upon registration, each team will be assigned a random fictional world such as Harry Potter, Percy Jackson, Squid Game, or others</li>
+              <li>The team leader will receive a specific character from that world</li>
+              <li>Other members may choose their own characters from the same universe</li>
+              <li>All members must roleplay as their chosen characters throughout the event</li>
+            </ul>
+            <h4>Round 1 - World Introduction:</h4>
+            <ul>
+              <li>Each member describes their fictional world without repetition, covering as much detail as possible</li>
+              <li>Total time: 3 minutes per team, split equally among members</li>
+              <li>Your creativity and teamwork will set the stage for what lies ahead...</li>
+            </ul>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹75</div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScz2HNiOkposhOQLJaSq6Bu7nBjMMNJSYcfljjdND0Eiik-cg/viewform?usp=sharing&ouid=112722313701936678276" target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+
+        <!-- Escape Room Event -->
+        <div class="event-card">
+          <h3 class="event-title">ESCAPE ROOM</h3>
+          <div class="event-rules">
+            <h4>Team Composition:</h4>
+            <p>3 players per team.</p>
+            <h4>Objective:</h4>
+            <p>Escape from the room and discover Sherlock's location before time runs out.</p>
+            <h4>Time Limit:</h4>
+            <p>(adjustable based on test runs).</p>
+            <h4>General Rules:</h4>
+            <ul>
+              <li>Players must stay within designated play areas, no force should be used on props</li>
+              <li>Listen carefully to instructions at the start of the game</li>
+              <li>Clues can be hidden anywhere but will never require dismantling fixtures</li>
+              <li>If stuck, players can request a Clue Card, but each request deducts 2 minutes from the timer</li>
+              <li>Landmine tiles and locked puzzles must be solved in sequence; skipping steps is not allowed</li>
+              <li>Breaking rules or damaging props will lead to immediate disqualification</li>
+            </ul>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹75</div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMEf9NHLp2awOxjPc_WbXHqcjxDwIsMm2LOl5r9G5E7IppkQ/viewform" target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+
+        <!-- Director's Screenplay Event -->
+        <div class="event-card">
+          <h3 class="event-title">DIRECTOR'S SCREENPLAY</h3>
+          <div class="event-rules">
+            <h4>ROUND 1: SCRIPTWRITING</h4>
+            <p>Each team receives a randomly assigned:</p>
+            <ul>
+              <li>Genre (e.g., Horror, Sci-fi, Rom-Com)</li>
+              <li>Setting (e.g., Haunted IKEA, Underwater City)</li>
+              <li>Bonus Element (e.g., Talking potato, Cursed grammar book)</li>
+            </ul>
+            <p>Write a brief original film scene. Best scripts qualify for Round 2</p>
+            <h4>ROUND 2: PERFORMANCE</h4>
+            <p>Enact the same scene, but with a twist:</p>
+            <ul>
+              <li>Switch the core emotion</li>
+              <li>Add a fake accent or modern slang</li>
+            </ul>
+            <p>Stage presence and creativity will decide the winners.</p>
+            <p><strong>Team Size:</strong> 3 - 5 Participants</p>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹75</div>
+            <a href="https://docs.google.com/forms/d/12wkaZtVBK4RqmrVa8my3kp04iMWIpAghlWem80PXlZM/edit" target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+
+   
+
+    <!-- Online Events -->
+
+     
+        
+        <!-- Word Wizard's Cup Event -->
+        <div class="event-card">
+          <h3 class="event-title">WORD WIZARDS' CUP</h3>
+          <div class="event-rules">
+            <h4>Round 1: Online Writing</h4>
+            <ul>
+              <li>Original Content Only – Your story must be your creation. Plagiarism will result in immediate disqualification</li>
+              <li>No Malpractice – Any attempt to cheat will lead to removal from the competition</li>
+              <li>Time Limit – You have 60 minutes to complete and submit your story. Once the timer ends, your work will be auto-submitted</li>
+              <li>Single Attempt Only – You can submit only once. Multiple submissions are not allowed</li>
+              <li>Note – The system actively monitors tab switching, fullscreen exits, and paste attempts. Any violation will instantly disqualify your entry</li>
+            </ul>
+            <h4>Round 2: Quick Quill</h4>
+            <ul>
+              <li>Participants will narrate a story live in front of the judges online</li>
+              <li>At random intervals, judges will introduce unexpected twists, settings, or characters</li>
+              <li>The participant must immediately incorporate each twist into their story without breaking flow</li>
+              <li>Each participant will have 5-7 minutes to complete their storytelling</li>
+              <li>The storyteller who adapts best and delivers the most engaging story wins the round</li>
+            </ul>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹20</div>
+            <a href="https://docs.google.com/forms/d/16ssu0lWGK-M8T6SjTCZzJOThCh1s2rO6RwV0S78Ixig/preview" target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+
+        <!-- Poetry Event -->
+        <div class="event-card">
+          <h3 class="event-title">POETRY</h3>
+          <div class="event-rules">
+            <h4>Rules:</h4>
+            <ul>
+              <li>Original Content Only – Your poem must be entirely your own creation. Plagiarism will lead to immediate disqualification</li>
+              <li>No Vulgarity or Offensive Content – Any use of inappropriate language, hate speech, or explicit imagery will result in removal from the competition</li>
+              <li>No AI/LLM Assistance – The use of AI tools (e.g., ChatGPT, Bard, etc.) or online poem generators is strictly prohibited</li>
+              <li>Image-Based Prompt – A random image will be shown to all participants. Your poem must be inspired by this image</li>
+              <li>Time Limit – You will have 60 minutes to write and submit your poem. Once the timer ends, your work will be auto-submitted</li>
+              <li>Single Attempt Only – You can submit only once. Multiple submissions are not allowed</li>
+            </ul>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹20</div>
+            <a href="https://forms.gle/T1MotEpmA8BVqpx78" target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+       
+        <!-- Interview Event -->
+        <div class="event-card">
+          <h3 class="event-title">THE INTERVIEW</h3>
+          <div class="event-rules">
+            <h4>Rules:</h4>
+            <ul>
+              <li>Have fun - no explicit or offensive language </li>
+              <li>Beat the clock - each interview session has a time limit </li>
+              <li>Judge is boss - the judges' decision is the final </li>
+              <li>No secret agents - no whispering answers from your 'invisible friends', no phones, no notes </li>
+              <li>Pack your career - we will ask you to create your resume or sell your imaginary skills. </li>
+            </ul>
+          </div>
+          <div class="event-footer">
+            <div class="registration-cost">Registration Cost: ₹20</div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScW9vSv_vUwKS_nvPkMbpJeBFtA1Ir0_MTZ0nK7CSwJ1r4Mrw/viewform?usp=header" target="_blank" class="register-btn">Register Now</a>
+          </div>
+        </div>
+
+    </section>
+  </main>
+
+  <script src="space.js"></script>
+</body>
+</html>
