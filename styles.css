@@ -328,6 +328,7 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: -30px;
 }
 
 .title-block {
@@ -347,8 +348,12 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
   height: 100px;
   width: auto;
 }
-.vox-logo {
-  height: 80px;
+
+
+/* Larger VL logo */
+.logo-vl {
+  height: 150px;
+  max-width: none;
 }
 
 /* Title */
@@ -390,14 +395,19 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
     height: 55px;
   }
 
-  .vox-logo {
-    height: 65px;
+    /* Larger VL logo (only for VL.png) */
+    .logo-vl {
+      height: 170px;
+      width: auto;
+      max-width: none;
+      background: rgba(0, 188, 255, 0.18);
+      border-radius: 18px;
+      box-shadow: 0 0 24px 6px rgba(0, 160, 255, 0.25), 0 2px 16px 2px rgba(0, 40, 80, 0.18);
+      padding: 10px 18px;
+      display: inline-block;
+    }
   }
 
-  .title {
-    font-size: clamp(2rem, 5vw, 3rem);
-  }
-}
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
