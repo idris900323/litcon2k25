@@ -3,6 +3,9 @@
 html, body {
   height: 100%;
 }
+html {
+  background: #050c16 !important;
+}
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
