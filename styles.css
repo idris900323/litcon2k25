@@ -1,3 +1,26 @@
+/* About Vox Litteraria card styling */
+.about-vox {
+  margin-top: 36px;
+}
+.about-vox h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #aee7ff;
+  margin-bottom: 14px;
+  text-shadow: 0 0 10px rgba(0,190,255,0.5);
+}
+.about-vox p {
+  margin: 0 auto;
+  max-width: 980px;
+  line-height: 1.7;
+  color: #eaf6ff;
+  background: rgba(4, 24, 45, 0.35);
+  border: 1px solid rgba(150, 210, 255, 0.18);
+  border-radius: 16px;
+  padding: clamp(14px, 3vw, 24px) clamp(14px, 3vw, 28px);
+  font-size: 1.13rem;
+}
 /* Contact Footer */
 .contact-footer {
   margin-top: 48px;
