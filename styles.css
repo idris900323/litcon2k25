@@ -1,3 +1,19 @@
+/* Make the entire site render at 90% visual scale */
+/* Preferred: use zoom where supported */
+@supports (zoom: 1) {
+  html { zoom: 0.9; }
+}
+
+/* Fallback for browsers that don't support zoom (e.g. Firefox) */
+@supports not (zoom: 1) {
+  body {
+    transform: scale(0.9);
+    transform-origin: top center;
+    width: calc(100% / 0.9);
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+}
 .image-toggle-main {
   width: 100%;
   max-width: 420px;
@@ -523,17 +539,17 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
 
 
 /* Logos */
-.logo {
-  height: 100px;
-  width: auto;
-}
+  .logo {
+    height: 100px;
+    width: auto;
+  }
 
 
 /* Larger VL logo */
-.logo-vl {
-  height: 150px;
-  max-width: none;
-}
+    .logo-vl {
+      height: 150px;
+      max-width: none;
+    }
 
 /* Title */
 .title {
@@ -590,6 +606,15 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
+  .logo {
+    height: 60px;
+    max-width: 80px;
+  }
+  .logo-vl {
+    height: 90px;
+    max-width: 110px;
+    padding: 4px 8px;
+  }
   /* Stack header items */
   .site-header {
     flex-direction: column;
