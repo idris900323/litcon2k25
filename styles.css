@@ -607,33 +607,36 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .logo {
-    height: 60px;
-    max-width: 80px;
+    height: 44px;
+    max-width: 60px;
   }
   .logo-vl {
-    height: 90px;
-    max-width: 110px;
-    padding: 4px 8px;
+    height: 60px;
+    max-width: 80px;
+    padding: 2px 4px;
   }
-  /* Stack header items */
+  /* Keep header items in a row on mobile */
   .site-header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 15px;
+    justify-content: space-between;
+    padding: 10px 6px;
     min-height: auto;
+    gap: 0;
   }
 
   .left-logos, .right-logo {
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 6px;
+    margin-bottom: 0;
   }
 
   .title-block {
     position: static;
     transform: none;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .title {
