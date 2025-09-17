@@ -415,29 +415,7 @@
   animation: fadeInEventDetails 0.3s;
   overflow: visible;
 }
-.chevron-indicator {
-  position: absolute;
-  left: 50%;
-  bottom: 12px;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.55);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: none;
-  align-items: center;
-.event-card.image-toggle-main {
-  width: auto;
-  margin: 0;
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  border-radius: 16px;
-  overflow: visible;
-  display: inline-block;
-  vertical-align: top;
-  transition: background 0.3s, box-shadow 0.3s, margin 0.3s, padding 0.3s, width 0.3s;
-}
+
 .event-card.image-toggle-main.expanded {
   width: 100%;
   margin: 0 auto 32px auto;
@@ -462,11 +440,7 @@
   animation: fadeInEventDetails 0.3s;
   overflow: visible;
 }
-  font-size: 1.5em;
-  color: #7fe5ff;
-  transition: transform 0.3s;
-  pointer-events: none;
-}
+
 .event-details {
   display: none;
   opacity: 0;
