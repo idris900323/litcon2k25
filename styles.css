@@ -34,15 +34,11 @@
 
 
 /* LitCon Highlight with extremely light blue-pink gradient glow */
-@keyframes litcon-border-glow {
-  0% { box-shadow: 0 0 24px 6px #5fd0ff77, 0 0 0 #ff5fd077; }
-  50% { box-shadow: 0 0 48px 16px #5fd0ffcc, 0 0 48px #ff5fd0cc, 0 0 24px #2e3a5e99; }
-  100% { box-shadow: 0 0 24px 6px #5fd0ff77, 0 0 0 #ff5fd077; }
-}
+
 .litcon-highlight {
   background: linear-gradient(120deg, #2e3a5e 0%, #4e5a9e 60%, #5fd0ff 80%, #ff5fd0 100%);
   background-size: 200% 200%;
-  animation: litcon-bg-move 7s ease-in-out infinite, litcon-border-glow 5s ease-in-out infinite;
+  animation: litcon-bg-move 7s ease-in-out infinite, litcon-border-glow 5s cubic-bezier(0.77,0,0.175,1) alternate infinite;
   border: 3.5px solid #5fd0ff;
   color: #fff;
   position: relative;
@@ -67,7 +63,7 @@
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: litcon-title-glow 5s alternate infinite, litcon-title-gradient 4s linear infinite;
+  animation: litcon-title-glow 5s cubic-bezier(0.77,0,0.175,1) alternate infinite, litcon-title-gradient 4s linear infinite;
   position: relative;
   text-shadow: 0 0 32px #5fd0ffcc, 0 0 32px #ff5fd0cc, 0 0 12px #2e3a5e;
 }
@@ -75,20 +71,32 @@
   0% {
     text-shadow: 0 0 28px #5fd0ffdd, 0 0 10px #2e3a5e99;
   }
-  15% {
-    text-shadow: 0 0 32px #5fd0ffcc, 0 0 12px #2e3a5e88;
+  10% {
+    text-shadow: 0 0 30px #6fdcffcc, 0 0 11px #2e3a5e99;
+  }
+  20% {
+    text-shadow: 0 0 32px #7faaffcc, 0 0 12px #2e3a5e88;
   }
   30% {
-    text-shadow: 0 0 36px #7faaffbb, 0 0 14px #2e3a5e77;
+    text-shadow: 0 0 34px #9fbaffbb, 0 0 13px #2e3a5e88;
+  }
+  40% {
+    text-shadow: 0 0 36px #bfcaffbb, 0 0 14px #2e3a5e77;
   }
   50% {
-    text-shadow: 0 0 40px #ff5fd0cc, 0 0 16px #2e3a5e88;
+    text-shadow: 0 0 38px #ff5fd0cc, 0 0 15px #2e3a5e88;
+  }
+  60% {
+    text-shadow: 0 0 36px #ff99e6cc, 0 0 14px #2e3a5e77;
   }
   70% {
-    text-shadow: 0 0 36px #ff99e6bb, 0 0 14px #2e3a5e77;
+    text-shadow: 0 0 34px #ffb9f6bb, 0 0 13px #2e3a5e77;
   }
-  85% {
-    text-shadow: 0 0 32px #5fd0ffbb, 0 0 12px #2e3a5e77;
+  80% {
+    text-shadow: 0 0 32px #ffd9f6bb, 0 0 12px #2e3a5e66;
+  }
+  90% {
+    text-shadow: 0 0 30px #5fd0ffcc, 0 0 11px #2e3a5e88;
   }
   100% {
     text-shadow: 0 0 28px #5fd0ffdd, 0 0 10px #2e3a5e99;
@@ -103,7 +111,7 @@
   border-radius: 3px;
   background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
   box-shadow: 0 0 16px #5fd0ff99, 0 0 24px #ff5fd099, 0 2px 8px #2e3a5e44;
-  animation: litcon-underline-glow 5s alternate infinite;
+  animation: litcon-underline-glow 5s cubic-bezier(0.77,0,0.175,1) alternate infinite;
 }
 @keyframes litcon-underline-glow {
   0% {
@@ -111,38 +119,45 @@
     background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
   }
   10% {
-    box-shadow: 0 0 20px #5fd0ff99, 0 4px 12px #2e3a5e44;
+    box-shadow: 0 0 18px #6fdcffbb, 0 3.5px 10.5px #2e3a5e55;
     background: linear-gradient(90deg, #6fdcff 0%, #fffbe6 50%, #ff99e6 100%);
   }
-  25% {
-    box-shadow: 0 0 24px #7faaff88, 0 5px 14px #2e3a5e44;
+  20% {
+    box-shadow: 0 0 20px #7faaffbb, 0 4px 11px #2e3a5e44;
     background: linear-gradient(90deg, #7faaff 0%, #fffbe6 50%, #ff99e6 100%);
   }
+  30% {
+    box-shadow: 0 0 22px #9fbaffbb, 0 4.5px 11.5px #2e3a5e44;
+    background: linear-gradient(90deg, #9fbaff 0%, #fffbe6 50%, #ffb9f6 100%);
+  }
+  40% {
+    box-shadow: 0 0 24px #bfcaffbb, 0 5px 12px #2e3a5e44;
+    background: linear-gradient(90deg, #bfcaff 0%, #fffbe6 50%, #ffd9f6 100%);
+  }
   50% {
-    box-shadow: 0 0 28px #ff5fd0aa, 0 6px 16px #2e3a5e55;
+    box-shadow: 0 0 26px #ff5fd0bb, 0 5.5px 12.5px #2e3a5e55;
     background: linear-gradient(90deg, #ff5fd0 0%, #fffbe6 50%, #5fd0ff 100%);
   }
-  75% {
-    box-shadow: 0 0 24px #ff99e688, 0 5px 14px #7faaff44;
+  60% {
+    box-shadow: 0 0 24px #ff99e6bb, 0 5px 12px #2e3a5e44;
     background: linear-gradient(90deg, #ff99e6 0%, #fffbe6 50%, #7faaff 100%);
   }
+  70% {
+    box-shadow: 0 0 22px #ffb9f6bb, 0 4.5px 11.5px #7faaff44;
+    background: linear-gradient(90deg, #ffb9f6 0%, #fffbe6 50%, #9fbaff 100%);
+  }
+  80% {
+    box-shadow: 0 0 20px #ffd9f6bb, 0 4px 11px #7faaff44;
+    background: linear-gradient(90deg, #ffd9f6 0%, #fffbe6 50%, #bfcaff 100%);
+  }
   90% {
-    box-shadow: 0 0 20px #5fd0ff99, 0 4px 12px #2e3a5e44;
-    background: linear-gradient(90deg, #6fdcff 0%, #fffbe6 50%, #ff99e6 100%);
+    box-shadow: 0 0 18px #5fd0ffbb, 0 3.5px 10.5px #2e3a5e55;
+    background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
   }
   100% {
     box-shadow: 0 0 16px #5fd0ffbb, 0 3px 10px #2e3a5e55;
     background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
   }
-}
-@keyframes litcon-border-glow {
-  0% { box-shadow: 0 0 20px 7px #5fd0ffbb, 0 0 0 #ff5fd066; }
-  15% { box-shadow: 0 0 24px 9px #5fd0ff99, 0 0 4px #7faaff66; }
-  30% { box-shadow: 0 0 28px 11px #7faaffaa, 0 0 8px #ff99e688; }
-  50% { box-shadow: 0 0 32px 13px #ff5fd0bb, 0 0 12px #2e3a5e55; }
-  70% { box-shadow: 0 0 28px 11px #ff99e6aa, 0 0 8px #7faaff66; }
-  85% { box-shadow: 0 0 24px 9px #5fd0ff99, 0 0 4px #ff99e688; }
-  100% { box-shadow: 0 0 20px 7px #5fd0ffbb, 0 0 0 #ff5fd066; }
 }
 .litcon-highlight p {
   color: #fffbe6;
@@ -1036,4 +1051,17 @@ section { padding: clamp(28px, 6vw, 56px) 6vw; text-align: center; }
   .stat-card {
     width: 100%;
   }
+}
+@keyframes litcon-border-glow {
+  0% { box-shadow: 0 0 20px 7px #5fd0ffbb, 0 0 0 #ff5fd066; }
+  10% { box-shadow: 0 0 22px 8px #6fdcffbb, 0 0 2px #7faaff66; }
+  20% { box-shadow: 0 0 24px 9px #7faaffbb, 0 0 4px #9fbaff66; }
+  30% { box-shadow: 0 0 26px 10px #9fbaffbb, 0 0 6px #bfcaff66; }
+  40% { box-shadow: 0 0 28px 11px #bfcaffbb, 0 0 8px #ffd9f666; }
+  50% { box-shadow: 0 0 32px 13px #ff5fd0bb, 0 0 10px #ff99e688; }
+  60% { box-shadow: 0 0 28px 11px #ff99e6bb, 0 0 8px #ffb9f666; }
+  70% { box-shadow: 0 0 26px 10px #ffb9f6bb, 0 0 6px #ffd9f666; }
+  80% { box-shadow: 0 0 24px 9px #ffd9f6bb, 0 0 4px #bfcaff66; }
+  90% { box-shadow: 0 0 22px 8px #5fd0ffbb, 0 0 2px #6fdcff66; }
+  100% { box-shadow: 0 0 20px 7px #5fd0ffbb, 0 0 0 #ff5fd066; }
 }
