@@ -36,42 +36,55 @@
 
 
   <main>
-    <!-- About -->
-    <section class="about">
-      <h2>About EnLit</h2>
-      <p>
-        The Literary Club of Easwari Engineering College is where words meet wonders. We’re home to storytellers, poets, and keen observers who turn everyday moments into magic. Our gazette, Veritas, now 7–8 editions strong, celebrates campus events, achievements, and raw student talent, while our special release, Engscoop, spotlights diverse literary voices. From laughter and love to chaos and creativity, every page carries the pulse of EEC. Here, English sharpens, ideas grow bolder, and voices grow louder. More than a club, we’re a stage where talent shines and imagination never runs dry.
-      </p>
+      <!-- LitCon Overview on top, EnLit and Vox side by side below -->
+      <section class="about-cards-vertical">
+        <div class="about-card panel litcon-highlight">
+          <h2>LitCon Overview</h2>
+          <p>
+            LitCon, the flagship event of the Literary Club at Easwari Engineering College, is a vibrant celebration of stories, poetry, debate, and performance — a stage where voices shine and new talent is discovered. The club itself is where words meet wonders, capturing creativity through our gazettes Veritas and Engscoop, and giving students a platform to express, inspire, and imagine without limits.
+          </p>
+        </div>
+        <div class="about-cards-row">
+          <div class="about-card panel">
+            <h2>About EnLit</h2>
+            <p>
+              The Literary Club of Easwari Engineering College is where words meet wonders. We’re home to storytellers, poets, and keen observers who turn everyday moments into magic. Our gazette, Veritas, now 7–8 editions strong, celebrates campus events, achievements, and raw student talent, while our special release, Engscoop, spotlights diverse literary voices. From laughter and love to chaos and creativity, every page carries the pulse of EEC. Here, English sharpens, ideas grow bolder, and voices grow louder. More than a club, we’re a stage where talent shines and imagination never runs dry.
+            </p>
+          </div>
+          <div class="about-card panel">
+            <h2>About Vox Litteraria</h2>
+            <p>
+              Vox is a vibrant family of seven dynamic wings, each offering something unique for every interest—Enlit, the Literary Club that celebrates creativity; EIEN, the Model United Nations that hones diplomacy and debate; ENN, the News Channel delivering insight and impact; Elite Encounters, the engaging Podcast platform; Paper & Pulse, the Magazine capturing stories and ideas; Noesis, the Blog sharing perspectives and reflections; and Toastmasters, the hub for mastering public speaking and leadership.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- About Vox Litteraria -->
-    <section class="about about-vox">
-      <h2>About Vox Litteraria</h2>
-      <p>
-        Vox is a vibrant family of seven dynamic wings, each offering something unique for every interest—Enlit, the Literary Club that celebrates creativity; EIEN, the Model United Nations that hones diplomacy and debate; ENN, the News Channel delivering insight and impact; Elite Encounters, the engaging Podcast platform; Paper & Pulse, the Magazine capturing stories and ideas; Noesis, the Blog sharing perspectives and reflections; and Toastmasters, the hub for mastering public speaking and leadership.
-      </p>
-    </section>
+      <div class="section-divider"></div>
 
     <!-- Stats -->
     <section class="stats">
-      <div class="stat-card">
+      <div class="stat-card card-hover">
         <div class="stat-number">15+</div>
         <div class="stat-text">Successful events in the club's maiden year</div>
       </div>
-      <div class="stat-card">
+      <div class="stat-card card-hover">
         <div class="stat-number">500+</div>
         <div class="stat-text">Participants last year</div>
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- Carousel (free-size box) -->
     <section class="carousel-section" id="events">
-      <div class="carousel-box">
+      <div class="carousel-box panel">
         <div class="carousel-track" id="track">
-          <img src="photo1.jpg" alt="Event 1">
-          <img src="photo5.jpg" alt="Event 2">
-          <img src="photo4.jpg" alt="Event 3">
-          <img src="photo2.jpg" alt="Event 4">
-          <img src="photo3.jpg" alt="Event 5">
+          <img src="photo1.jpg" alt="Event 1" class="carousel-img-hover">
+          <img src="photo5.jpg" alt="Event 2" class="carousel-img-hover">
+          <img src="photo4.jpg" alt="Event 3" class="carousel-img-hover">
+          <img src="photo2.jpg" alt="Event 4" class="carousel-img-hover">
+          <img src="photo3.jpg" alt="Event 5" class="carousel-img-hover">
         </div>
         <button class="carousel-btn prev" id="prev" aria-label="Previous slide">❮</button>
         <button class="carousel-btn next" id="next" aria-label="Next slide">❯</button>
