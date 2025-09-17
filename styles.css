@@ -32,22 +32,22 @@
   justify-content: center;
 }
 
-/* Highlight LitCon Overview */
-@keyframes litcon-border-glow {
-  0% { box-shadow: 0 0 24px 6px #ffe06655, 0 0 0 #2e3a5e55; }
-  50% { box-shadow: 0 0 48px 16px #ffe066cc, 0 0 24px #2e3a5e99; }
-  100% { box-shadow: 0 0 24px 6px #ffe06655, 0 0 0 #2e3a5e55; }
-}
 
+/* LitCon Highlight with extremely light blue-pink gradient glow */
+@keyframes litcon-border-glow {
+  0% { box-shadow: 0 0 24px 6px #5fd0ff77, 0 0 0 #ff5fd077; }
+  50% { box-shadow: 0 0 48px 16px #5fd0ffcc, 0 0 48px #ff5fd0cc, 0 0 24px #2e3a5e99; }
+  100% { box-shadow: 0 0 24px 6px #5fd0ff77, 0 0 0 #ff5fd077; }
+}
 .litcon-highlight {
-  background: linear-gradient(120deg, #2e3a5e 0%, #4e5a9e 60%, #ffe066 100%);
+  background: linear-gradient(120deg, #2e3a5e 0%, #4e5a9e 60%, #5fd0ff 80%, #ff5fd0 100%);
   background-size: 200% 200%;
-  animation: litcon-bg-move 7s ease-in-out infinite, litcon-border-glow 2.5s ease-in-out infinite;
-  border: 3.5px solid #ffe066;
+  animation: litcon-bg-move 7s ease-in-out infinite, litcon-border-glow 5s ease-in-out infinite;
+  border: 3.5px solid #5fd0ff;
   color: #fff;
   position: relative;
   z-index: 2;
-  box-shadow: 0 10px 48px 0 #ffe06655, 0 4px 0 0 #3a4a7e;
+  box-shadow: 0 10px 48px 0 #5fd0ff55, 0 0 48px 0 #ff5fd055, 0 4px 0 0 #3a4a7e;
   overflow: hidden;
   transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1);
 }
@@ -56,25 +56,43 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-/* Emphasized LitCon Overview Heading */
 .litcon-highlight h2 {
   font-size: 2.5rem;
   letter-spacing: 0.09em;
   margin-bottom: 1.3rem;
   font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
-  background: linear-gradient(90deg, #ffe066 10%, #fffbe6 40%, #ffe066 90%);
+  background: linear-gradient(90deg, #5fd0ff 10%, #fffbe6 40%, #ff5fd0 90%);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: litcon-title-glow 2.5s alternate infinite, litcon-title-gradient 4s linear infinite;
+  animation: litcon-title-glow 5s alternate infinite, litcon-title-gradient 4s linear infinite;
   position: relative;
-  text-shadow: 0 0 32px #ffe066cc, 0 0 12px #2e3a5e;
+  text-shadow: 0 0 32px #5fd0ffcc, 0 0 32px #ff5fd0cc, 0 0 12px #2e3a5e;
 }
-@keyframes litcon-title-gradient {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+@keyframes litcon-title-glow {
+  0% {
+    text-shadow: 0 0 28px #5fd0ffdd, 0 0 10px #2e3a5e99;
+  }
+  15% {
+    text-shadow: 0 0 32px #5fd0ffcc, 0 0 12px #2e3a5e88;
+  }
+  30% {
+    text-shadow: 0 0 36px #7faaffbb, 0 0 14px #2e3a5e77;
+  }
+  50% {
+    text-shadow: 0 0 40px #ff5fd0cc, 0 0 16px #2e3a5e88;
+  }
+  70% {
+    text-shadow: 0 0 36px #ff99e6bb, 0 0 14px #2e3a5e77;
+  }
+  85% {
+    text-shadow: 0 0 32px #5fd0ffbb, 0 0 12px #2e3a5e77;
+  }
+  100% {
+    text-shadow: 0 0 28px #5fd0ffdd, 0 0 10px #2e3a5e99;
+  }
 }
 .litcon-highlight h2::after {
   content: '';
@@ -83,17 +101,48 @@
   width: 70%;
   height: 5px;
   border-radius: 3px;
-  background: linear-gradient(90deg, #ffe066 0%, #fffbe6 50%, #ffe066 100%);
-  box-shadow: 0 0 16px #ffe06699, 0 2px 8px #2e3a5e44;
-  animation: litcon-underline-glow 2.5s alternate infinite;
+  background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
+  box-shadow: 0 0 16px #5fd0ff99, 0 0 24px #ff5fd099, 0 2px 8px #2e3a5e44;
+  animation: litcon-underline-glow 5s alternate infinite;
 }
 @keyframes litcon-underline-glow {
-  0% { box-shadow: 0 0 8px #ffe06699, 0 2px 8px #2e3a5e44; }
-  100% { box-shadow: 0 0 24px #ffe066cc, 0 4px 16px #2e3a5e88; }
+  0% {
+    box-shadow: 0 0 16px #5fd0ffbb, 0 3px 10px #2e3a5e55;
+    background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
+  }
+  10% {
+    box-shadow: 0 0 20px #5fd0ff99, 0 4px 12px #2e3a5e44;
+    background: linear-gradient(90deg, #6fdcff 0%, #fffbe6 50%, #ff99e6 100%);
+  }
+  25% {
+    box-shadow: 0 0 24px #7faaff88, 0 5px 14px #2e3a5e44;
+    background: linear-gradient(90deg, #7faaff 0%, #fffbe6 50%, #ff99e6 100%);
+  }
+  50% {
+    box-shadow: 0 0 28px #ff5fd0aa, 0 6px 16px #2e3a5e55;
+    background: linear-gradient(90deg, #ff5fd0 0%, #fffbe6 50%, #5fd0ff 100%);
+  }
+  75% {
+    box-shadow: 0 0 24px #ff99e688, 0 5px 14px #7faaff44;
+    background: linear-gradient(90deg, #ff99e6 0%, #fffbe6 50%, #7faaff 100%);
+  }
+  90% {
+    box-shadow: 0 0 20px #5fd0ff99, 0 4px 12px #2e3a5e44;
+    background: linear-gradient(90deg, #6fdcff 0%, #fffbe6 50%, #ff99e6 100%);
+  }
+  100% {
+    box-shadow: 0 0 16px #5fd0ffbb, 0 3px 10px #2e3a5e55;
+    background: linear-gradient(90deg, #5fd0ff 0%, #fffbe6 50%, #ff5fd0 100%);
+  }
 }
-@keyframes litcon-title-glow {
-  0% { text-shadow: 0 0 24px #ffe066cc, 0 0 8px #2e3a5e; }
-  100% { text-shadow: 0 0 48px #ffe066, 0 0 16px #2e3a5e; }
+@keyframes litcon-border-glow {
+  0% { box-shadow: 0 0 20px 7px #5fd0ffbb, 0 0 0 #ff5fd066; }
+  15% { box-shadow: 0 0 24px 9px #5fd0ff99, 0 0 4px #7faaff66; }
+  30% { box-shadow: 0 0 28px 11px #7faaffaa, 0 0 8px #ff99e688; }
+  50% { box-shadow: 0 0 32px 13px #ff5fd0bb, 0 0 12px #2e3a5e55; }
+  70% { box-shadow: 0 0 28px 11px #ff99e6aa, 0 0 8px #7faaff66; }
+  85% { box-shadow: 0 0 24px 9px #5fd0ff99, 0 0 4px #ff99e688; }
+  100% { box-shadow: 0 0 20px 7px #5fd0ffbb, 0 0 0 #ff5fd066; }
 }
 .litcon-highlight p {
   color: #fffbe6;
@@ -105,10 +154,10 @@
 }
 .litcon-highlight:hover {
   transform: scale(1.025) rotate(-0.5deg);
-  box-shadow: 0 16px 64px 0 #ffe066cc, 0 8px 0 0 #3a4a7e;
+  box-shadow: 0 16px 64px 0 #5fd0ffcc, 0 0 64px 0 #ff5fd0cc, 0 8px 0 0 #3a4a7e;
 }
 .litcon-highlight:hover p {
-  color: #ffe066;
+  color: #5fd0ff;
   transform: scale(1.04);
 }
 
