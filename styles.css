@@ -1,19 +1,3 @@
-/* Make the entire site render at 90% visual scale */
-/* Preferred: use zoom where supported */
-@supports (zoom: 1) {
-  html { zoom: 0.9; }
-}
-
-/* Fallback for browsers that don't support zoom (e.g. Firefox) */
-@supports not (zoom: 1) {
-  body {
-    transform: scale(0.9);
-    transform-origin: top center;
-    width: calc(100% / 0.9);
-    margin: 0 auto;
-    overflow-x: hidden;
-  }
-}
 .image-toggle-main {
   width: 100%;
   max-width: 420px;
@@ -193,12 +177,33 @@ html, body {
   height: 100%;
 }
 html {
-  background: #050c16 !important;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+html::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(ellipse at 50% 0%, #0a1a2f 70%, #050c16 100%) fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 }
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
   color: #e9f7ff;
+  background: none;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 }
 

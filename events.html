@@ -268,8 +268,30 @@
     function toggleDesc(container) {
       const card = container.closest('.event-card');
       const desc = card.querySelector('.main-desc');
+      const willExpand = !desc.classList.contains('show');
+      // Close all other cards
+      document.querySelectorAll('.event-card').forEach(otherCard => {
+        if (otherCard !== card) {
+          otherCard.classList.remove('expanded');
+          const otherDesc = otherCard.querySelector('.main-desc');
+          if (otherDesc) otherDesc.classList.remove('show');
+        }
+      });
+      // Toggle this card
       desc.classList.toggle('show');
       card.classList.toggle('expanded', desc.classList.contains('show'));
+      if (willExpand) {
+        // Wait for transition to finish, then scroll
+        setTimeout(() => {
+          const rect = desc.getBoundingClientRect();
+          const scrollY = window.scrollY || window.pageYOffset;
+          // Scroll so the description is 40px below the top of the viewport
+          window.scrollTo({
+            top: rect.top + scrollY - 40,
+            behavior: 'smooth'
+          });
+        }, 400);
+      }
     }
   </script>
 </body>
