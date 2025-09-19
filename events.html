@@ -105,7 +105,7 @@
             </div>
             <div class="event-footer">
               <div class="registration-cost">Registration Cost: ₹75</div>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBk3gicc56ElWD80slcS47sUCmgajM75gnKngpeg-iTMYFmw/viewform?usp=header" target="_blank" class="register-btn">Register Now</a>
+              <button class="register-btn" onclick="showClosedPopup(event)">Register Now</button>
             </div>
           </div>
         </div>
@@ -208,6 +208,14 @@
   </main>
 
   <footer class="contact-footer">
+  <!-- Registration Closed Popup -->
+  <div id="closed-popup" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(10,20,40,0.65); justify-content:center; align-items:center;">
+    <div style="background:#122040; color:#fff; border-radius:18px; box-shadow:0 8px 32px #00336688; padding:32px 28px; max-width:90vw; text-align:center;">
+      <h2 style="color:#7fe5ff; margin-bottom:18px;">Registration Closed</h2>
+      <p style="font-size:1.15rem; margin-bottom:22px;">Registration for Escape Room has closed.<br>Please participate in other events!</p>
+      <button onclick="closeClosedPopup()" style="background:#7fe5ff; color:#122040; font-weight:700; border:none; border-radius:8px; padding:10px 28px; font-size:1.1rem; cursor:pointer;">OK</button>
+    </div>
+  </div>
     <h3>Contact Us</h3>
     <div class="insta-links">
   <a href="https://www.instagram.com/eec_vox_litteraria_club?igsh=Njl2N2U0MDhjd2t6" target="_blank" rel="noopener" class="insta-link">Vox Litteraria Instagram</a>
@@ -217,6 +225,15 @@
   </footer>
 
   <script src="space.js"></script>
+  <script>
+    function showClosedPopup(e) {
+      e.preventDefault();
+      document.getElementById('closed-popup').style.display = 'flex';
+    }
+    function closeClosedPopup() {
+      document.getElementById('closed-popup').style.display = 'none';
+    }
+  </script>
   <script>
     function toggleDesc(container) {
       const card = container.closest('.event-card');
