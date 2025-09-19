@@ -61,7 +61,7 @@
             </div>
             <div class="event-footer">
               <div class="registration-cost">Registration Cost: ₹25</div>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaN9qVzXBe100kUvkIkTnxak1A2Fwd6AzIGZoM_N8xP4q_eQ/viewform?usp=dialog" target="_blank" class="register-btn">Register Now</a>
+              <button class="register-btn" onclick="showClosedPopup(event)">Register Now</button>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@
             </div>
             <div class="event-footer">
               <div class="registration-cost">Registration Cost: ₹75</div>
-              <button class="register-btn" onclick="showClosedPopup(event)">Register Now</button>
+              <button class="register-btn" onclick="showClosedPopup(event, 'WHO\'S LYING?')">Register Now</button>
             </div>
           </div>
         </div>
@@ -210,9 +210,9 @@
   <footer class="contact-footer">
   <!-- Registration Closed Popup -->
   <div id="closed-popup" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(10,20,40,0.65); justify-content:center; align-items:center;">
-    <div style="background:#122040; color:#fff; border-radius:18px; box-shadow:0 8px 32px #00336688; padding:32px 28px; max-width:90vw; text-align:center;">
-      <h2 style="color:#7fe5ff; margin-bottom:18px;">Registration Closed</h2>
-      <p style="font-size:1.15rem; margin-bottom:22px;">Registration for Escape Room has closed.<br>Please participate in other events!</p>
+    <div id="closed-popup-content" style="background:#122040; color:#fff; border-radius:18px; box-shadow:0 8px 32px #00336688; padding:32px 28px; max-width:90vw; text-align:center;">
+      <h2 id="closed-popup-title" style="color:#7fe5ff; margin-bottom:18px;">Registration Closed</h2>
+      <p id="closed-popup-msg" style="font-size:1.15rem; margin-bottom:22px;">Registration for Escape Room has closed.<br>Please participate in other events!</p>
       <button onclick="closeClosedPopup()" style="background:#7fe5ff; color:#122040; font-weight:700; border:none; border-radius:8px; padding:10px 28px; font-size:1.1rem; cursor:pointer;">OK</button>
     </div>
   </div>
@@ -226,9 +226,17 @@
 
   <script src="space.js"></script>
   <script>
-    function showClosedPopup(e) {
+    function showClosedPopup(e, eventName) {
       e.preventDefault();
       document.getElementById('closed-popup').style.display = 'flex';
+      // Swap the messages for Who's Lying and Escape Room
+      var title = 'Registration Closed';
+      var msg = "Registration for <b>Who's Lying?</b> has closed.<br>Please participate in other events!";
+      if (eventName === "WHO'S LYING?") {
+        msg = 'Registration for Escape Room has closed.<br>Please participate in other events!';
+      }
+      document.getElementById('closed-popup-title').innerHTML = title;
+      document.getElementById('closed-popup-msg').innerHTML = msg;
     }
     function closeClosedPopup() {
       document.getElementById('closed-popup').style.display = 'none';
